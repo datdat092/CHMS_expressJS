@@ -2,6 +2,25 @@
 
 A simple Company Management System built with Express.js and MongoDB. This system allows for basic functionalities like user authentication, employee management, and more. It provides an API for managing employees and authenticating users.
 
+# Project Structure
+```ruby
+company-management-system/
+│
+├── config/
+│   └── db.js            # MongoDB connection configuration
+├── controllers/          # API logic for different routes
+│   └── employeeController.js
+├── models/               # Mongoose models for database
+│   └── Employee.js
+│   └── User.js           # User model for authentication
+├── routes/               # Route definitions
+│   └── employeeRoutes.js
+│   └── authRoutes.js     # Authentication routes (login/signup)
+├── .env                  # Environment variables
+├── server.js             # Main Express server file
+└── package.json
+```
+
 # Features
 
 <li>User Authentication: Register and log in using JWT authentication.
@@ -32,10 +51,81 @@ A simple Company Management System built with Express.js and MongoDB. This syste
 
 # Prerequisites.
 
-Installation.
+## Installation.
 
 1. Clone the repository:
+```ruby
+git clone https://github.com/mscbuild/CHMS_expressJS.git cd CHMS_expressJS
 ```
-git clone https://github.com/mscbuild/CHMS_expressJS.git
-cd CHMS_expressJS
+2. Install dependencies:
+
+Run the following command to install the necessary dependencies:
+
+```ruby
+npm install
 ```
+3. Set up environment variables:
+
+Create a `.env` file in the root directory and define the following environment variables:
+
+```ruby
+MONGO_URI=mongodb://localhost:27017/companyDB
+JWT_SECRET=your_jwt_secret_key
+PORT=5000
+```
+`MONGO_URI`: Your MongoDB connection string. If you're using MongoDB Atlas, use the connection string provided by Atlas.
+
+`JWT_SECRET`: A secret key for JWT encoding.
+
+`PORT`: The port the application will run on (default is 5000).
+
+# Running the Application
+
+To start the development server, use:
+
+```ruby
+npx nodemon server.js
+```
+The server will run at `http://localhost:5000` by default.
+
+# API Endpoints.
+
+## Authentication Routes.
+
+<li>POST /api/auth/register: Register a new user.
+
+<li>Request body:
+```ruby
+{
+  "username": "user1",
+  "password": "password123"
+}
+```
+<li></li>POST /api/auth/login: Login with existing credentials.
+
+<li>Request body:
+```ruby
+{
+  "username": "user1",
+  "password": "password123"
+}
+```
+# Employee Management Routes.
+
+<li>POST /api/employees: Create a new employee.
+
+<li>Request body:
+
+```ruby
+{
+  "name": "John Doe",
+  "role": "Software Engineer",
+  "department": "Engineering",
+  "contact": "john.doe@example.com",
+  "salary": 70000
+}
+```
+<li>GET /api/employees: Get all employees.
+
+# Development
+<li>If you'd like to contribute or develop new features, follow these steps:</li>
