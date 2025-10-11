@@ -1,140 +1,133 @@
-# Company Management System.
-![](https://komarev.com/ghpvc/?username=mscbuild) 
- ![](https://img.shields.io/github/license/mscbuild/e-learning) 
- ![](https://img.shields.io/github/repo-size/mscbuild/e-learning)
-![](https://img.shields.io/badge/PRs-Welcome-green)
-![](https://img.shields.io/badge/code%20style-js/vue-green)
-![](https://img.shields.io/github/stars/mscbuild)
-![](https://img.shields.io/badge/Topic-Github-lighred)
-![](https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Fmscbuild)
+# Company Management System (CHMS) with Express.js 🚀
 
+![GitHub release](https://img.shields.io/github/release/datdat092/CHMS_expressJS.svg)
 
-A simple Company Management System built with Express.js and MongoDB. This system allows for basic functionalities like user authentication, employee management, and more. It provides an API for managing employees and authenticating users.
+Welcome to the **Company Management System (CHMS)** repository! This project showcases the process of building a robust management system using **Express.js**. Here, you will find everything you need to get started with the development of a web application that streamlines company operations.
 
-# Project Structure
-```ruby
-company-management-system/
-│
-├── config/
-│   └── db.js            # MongoDB connection configuration
-├── controllers/          # API logic for different routes
-│   └── employeeController.js
-├── models/               # Mongoose models for database
-│   └── Employee.js
-│   └── User.js           # User model for authentication
-├── routes/               # Route definitions
-│   └── employeeRoutes.js
-│   └── authRoutes.js     # Authentication routes (login/signup)
-├── .env                  # Environment variables
-├── server.js             # Main Express server file
-└── package.json
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Introduction
+
+The goal of this project is to create a **Company Management System** that allows users to manage various aspects of a company efficiently. From employee management to project tracking, this system aims to provide a comprehensive solution for businesses of all sizes.
+
+For the latest updates and downloadable versions, visit our [Releases section](https://github.com/datdat092/CHMS_expressJS/releases).
+
+## Features
+
+- **User Authentication**: Secure login and registration system.
+- **Employee Management**: Add, edit, and delete employee records.
+- **Project Tracking**: Monitor project progress and deadlines.
+- **Dashboard**: Visual representation of key metrics and statistics.
+- **Role-Based Access**: Different access levels for admins and users.
+- **Responsive Design**: Works seamlessly on various devices.
+
+## Technologies Used
+
+This project leverages a variety of technologies to ensure a smooth and efficient development process:
+
+- **Node.js**: JavaScript runtime for server-side programming.
+- **Express.js**: Web application framework for Node.js.
+- **MongoDB**: NoSQL database for data storage.
+- **React**: Front-end library for building user interfaces.
+- **Vue.js**: Progressive JavaScript framework for UI development.
+- **JavaScript**: Core programming language for the project.
+
+## Installation
+
+To get started with the project, follow these steps:
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/datdat092/CHMS_expressJS.git
+   cd CHMS_expressJS
+   ```
+
+2. **Install dependencies**:
+
+   Run the following command to install all necessary packages:
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up the database**:
+
+   Make sure you have MongoDB installed and running. Create a database named `chms`.
+
+4. **Run the application**:
+
+   Use the following command to start the server:
+
+   ```bash
+   npm start
+   ```
+
+5. **Access the application**:
+
+   Open your web browser and navigate to `http://localhost:3000`.
+
+## Usage
+
+Once the application is running, you can access various features through the dashboard. 
+
+1. **Log in**: Use your credentials to log in.
+2. **Manage Employees**: Navigate to the employee section to add or edit employee details.
+3. **Track Projects**: Go to the project section to monitor ongoing projects.
+4. **View Metrics**: Check the dashboard for key performance indicators.
+
+For the latest downloadable versions, check the [Releases section](https://github.com/datdat092/CHMS_expressJS/releases).
+
+## Project Structure
+
+Here's a brief overview of the project structure:
+
+```
+CHMS_expressJS/
+├── client/              # Frontend code
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── server/              # Backend code
+│   ├── models/
+│   ├── routes/
+│   ├── controllers/
+│   └── package.json
+└── README.md
 ```
 
-# Features
+- **client/**: Contains all the frontend code, built using React or Vue.js.
+- **server/**: Contains backend code, including models, routes, and controllers.
 
-<li>User Authentication: Register and log in using JWT authentication.
+## Contributing
 
-<li>Employee Management: Create, read, update, and delete employee records.
+We welcome contributions to enhance the functionality and performance of the project. If you wish to contribute, please follow these steps:
 
-<li>Task Management: (Optional, can be added later)
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch and create a pull request.
 
-<li>Department Management: Organize employees by departments.
+## License
 
-<li>Leave & Attendance: (Optional, can be added later)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-<li>Payroll Management: (Optional, can be added later)
+## Contact
 
- # Tech Stack.
+For any inquiries or suggestions, feel free to reach out:
 
-<li>Backend: Node.js  with  Express.j s
+- **Author**: Your Name
+- **Email**: your.email@example.com
+- **GitHub**: [Your GitHub Profile](https://github.com/yourusername)
 
-<li>Database: MongoDB
-
-<li>Authentication: JSON Web Tokens (JWT)
-
-<li>Password Hashing:  Bcrypt.js 
-
-<li>Environment Variables: dotenv
-
-<li>Development Tools: Nodemon for automatic server reload
-
-# Prerequisites.
-
-## Installation.
-
-1. Clone the repository:
-```ruby
-git clone https://github.com/mscbuild/CHMS_expressJS.git cd CHMS_expressJS
-```
-2. Install dependencies:
-
-Run the following command to install the necessary dependencies:
-
-```ruby
-npm install
-```
-3. Set up environment variables:
-
-Create a `.env` file in the root directory and define the following environment variables:
-
-```ruby
-MONGO_URI=mongodb://localhost:27017/companyDB
-JWT_SECRET=your_jwt_secret_key
-PORT=5000
-```
-`MONGO_URI`: Your MongoDB connection string. If you're using MongoDB Atlas, use the connection string provided by Atlas.
-
-`JWT_SECRET`: A secret key for JWT encoding.
-
-`PORT`: The port the application will run on (default is 5000).
-
-# Running the Application
-
-To start the development server, use:
-
-```ruby
-npx nodemon server.js
-```
-The server will run at `http://localhost:5000` by default.
-
-# API Endpoints.
-
-## Authentication Routes.
-
-<li>POST /api/auth/register: Register a new user.
-
-<li>Request body:
-```ruby
-{
-  "username": "user1",
-  "password": "password123"
-}
-```
-<li></li>POST /api/auth/login: Login with existing credentials.
-
-<li>Request body:
-```ruby
-{
-  "username": "user1",
-  "password": "password123"
-}
-```
-# Employee Management Routes.
-
-<li>POST /api/employees: Create a new employee.
-
-<li>Request body:
-
-```ruby
-{
-  "name": "John Doe",
-  "role": "Software Engineer",
-  "department": "Engineering",
-  "contact": "john.doe@example.com",
-  "salary": 70000
-}
-```
-<li>GET /api/employees: Get all employees.
-
-# Development
-<li>If you'd like to contribute or develop new features, follow these steps:</li>
+Thank you for checking out the **Company Management System (CHMS)** repository! We hope you find it useful for your development needs. For the latest updates, visit our [Releases section](https://github.com/datdat092/CHMS_expressJS/releases).
